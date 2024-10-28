@@ -35,12 +35,12 @@ onMounted(async () => {
       const files = await queryContent(`/${folderName}`).find();
       if (files.length > 0) {
         const firstFile = files[0];
-        firstFileLink.value = firstFile._path;
-        folderTitle.value = firstFile.title;
+          firstFile._path;
+        firstFile.title;
         firstFileDescription.value = firstFile.description || ''; // Extract description
 
         // Populate the table of contents
-        folderTOC.value = files.map(file => ({
+          files.map(file => ({
           title: file.title, // Assuming each file has a 'title' property
           path: file._path, // Path to the file
           description: file.description || '', // Add description if available
@@ -48,7 +48,7 @@ onMounted(async () => {
 
         // Initialize description visibility state
         files.forEach(file => {
-          descriptionVisibility.value[file._path] = false;
+           false;
         });
       }
   } catch (error) {
